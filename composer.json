@@ -1,5 +1,5 @@
 {
-    "name": "testa/module_blog",
+    "name": "icecream-testa/dev-blog",
     "description": "Magento 2 Extension to Fetch Blog Posts from Feed",
     "type": "magento2-module",
     "license": [
