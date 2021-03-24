@@ -1,0 +1,48 @@
+<?php
+
+use Testa\Blog\Block\BlogProvider;
+use Testa\Blog\Helper\Image;
+
+/* @var BlogProvider $block */
+$items = $block->getBlogItemsFromFeed();
+
+/* @var Image $helper */
+$images = $this->helper("Testa\Blog\Helper\Image")->getMainArticleImages();
+
+?>
+
+<!-- Iterate over all blog elements and create a blog article tile -->
+<?php foreach($items as $key => $item) : ?>
+<div class="blog-article">
+    <!-- Checks if blog article has an image and creates an image tag if necessary -->
+    <?php if(!is_null($images[$key]["src"])) :?>
+        <img src="<?= $images[$key]["src"]; ?>" alt="<?= $images[$key]["alt"]; ?>" />
+    <?php endif; ?>
+    <h2 class="blog-title"><?= $item["title"]; ?></h2>
+    <p class="publish-data">
+        <span class="date">
+            <i class="fas fa-calendar-day"></i>
+            <?= $item["pubDate"]; ?>
+        </span>
+        <span class="author">
+            <i class="fas fa-child"></i>
+            <?= $item["author"]; ?>
+        </span>
+        <span class="comments">
+            <i class="fas fa-comments"></i>
+            <a href="<?= $item["commentsLink"]; ?>">
+                <?= $item["comments"]; ?>
+            </a>
+        </span>
+    </p>
+    <div class="blog-content short-description">
+        <?= $item["shortDescription"]; ?>
+    </div>
+    <div class="blog-content full-content hidden">
+        <?= $item["content"]; ?>
+    </div>
+    <button class="toggle-read-more">
+        <?= __("Read More") ?>
+    </button>
+</div>
+<?php endforeach; ?>

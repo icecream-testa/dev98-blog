@@ -1,0 +1,20 @@
+{
+    "name": "testa/module_blog",
+    "description": "Magento 2 Extension to Fetch Blog Posts from Feed",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Testa\\Blog\\": ""
+        }
+    }
+}

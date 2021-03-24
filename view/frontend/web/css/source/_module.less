@@ -1,0 +1,119 @@
+// Declaration of general style
+@ash-black: rgb(51, 51, 51);
+@main-color: rgba(65, 100, 196, 0.6);
+@main-hover-color: rgba(65, 100, 196, 0.8);
+@main-darker: rgba(65, 100, 196, 1);
+@ghost-white: rgb(248, 248, 255);
+
+@border-radius: 1px;
+
+// General Elements
+h1,
+h2.blog-title {
+    border-radius: @border-radius;
+    background: linear-gradient(@main-color, @main-darker);
+    color: @ghost-white;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    text-align: center;
+    font-weight: 600;
+}
+h2.blog-title {
+    display: inline-block;
+}
+.go-to-blog {
+    text-align: left;
+}
+
+// Blog-Article Tiles
+.blog-articles {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    h2.blog-title {
+        font-size: 20px;
+    }
+    p {
+      > strong {
+          word-break: break-all;
+      }
+    }
+    img {
+        display: block;
+        margin: auto;
+    }
+    button {
+        margin: 10px auto;
+        background:  linear-gradient(@main-color, @main-darker);
+        color: @ghost-white;
+        border-radius: @border-radius;
+        &:hover {
+            background: linear-gradient(@main-hover-color, @main-darker);
+        }
+    }
+    p,
+    ul {
+        word-break: break-all;
+    }
+    .hidden {
+        display: none;
+    }
+    .shown {
+        display: block;
+    }
+    .blog-article {
+        background-color: @ghost-white;
+        padding: 15px;
+        margin: 20px 0;
+    }
+    .publish-data {
+         i {
+             padding-right: 4px;
+         }
+         .date,
+         .author,
+         .comments {
+             display: block;
+         }
+         .comments {
+             a {
+                 color: @ash-black;
+             }
+         }
+     }
+    .full-content,
+    .short-description {
+        text-align: justify;
+        h2 {
+            font-size: 18px;
+            background: transparent;
+            color: @main-darker;
+            word-break: break-all;
+        }
+    }
+    // Redesign of classes from xml-feed
+    .read-more,
+    .screen-reader-text {
+        position: absolute;
+        overflow: hidden;
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+    }
+    .lang\:php,
+    .EnlighterJSRAW,
+    .code,
+    pre {
+        white-space: pre-line;
+        text-align: left;
+        background-color: @ash-black;
+        color: @ghost-white;
+    }
+    span.lang\:php {
+        background-color: @ghost-white;
+        color:  @ash-black;
+        font-size: 14px;
+    }
+    // End  style code sections
+}
+

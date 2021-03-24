@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="Testa_Blog::js/render.js" defer="true"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Testa\Blog\Block\BlogProvider" name="blog.overview" template="Testa_Blog::blog_overview.phtml" after="-">
+                <block class="Testa\Blog\Block\BlogProvider" name="blog.items" template="Testa_Blog::blog_items.phtml"/>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

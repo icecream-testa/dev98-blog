@@ -1,0 +1,15 @@
+<?php
+// ToDo: This section shall be moved to the cms page, if customer wants to edit.
+/* @var \Testa\Blog\Block\BlogProvider $block */
+?>
+
+<div class="blog-container">
+    <h1><?= __("New and interesting Information from the netz98 Developer Universe") ?></h1>
+    <div class="blog-articles">
+        <?= $block->getChildHtml("blog.items") ?>
+    <div>
+    <div class="go-to-blog">
+        <?= __("More information about the Magento Universe you can find <a href='https://dev98.de/'>here</a>.") ?>
+    </div>
+</div>
+
